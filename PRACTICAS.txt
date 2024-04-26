@@ -1,0 +1,75 @@
+------------------------------------------------------------------------------------PRACTICAS1------------------------------------------------------------------------------------------
+USE default;
+CREATE EXTERNAL TABLE practica1(
+    Nombre STRING,
+    Edad INT,
+    Direccion STRING,
+    Profecion STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|' 
+STORED AS TEXTFILE
+LOCATION 'hdfs:/user/cloudera/PRACTICAS';
+
+SELECT * FROM practica1;
+drop table practica1 purge;
+------------------------------------------------------------------------------------PRACTICAS2------------------------------------------------------------------------------------------
+///////////////////// tmp_movimientos//////////////////////////
+USE default;
+CREATE EXTERNAL TABLE tmp_movimientos(
+col_name	data_type	comment
+cve_identificador_operativo	string	
+fec_proceso	string	
+cve_folio_operacion	 string	
+cve_divisa	string	
+num_cta_contable	string	
+cve_nivel_atencion1	string	
+cve_nivel_atencion2	string	
+cve_nivel_atencion3	string	
+cve_nivel_atencion4	string	
+cve_nivel_atencion5	string	
+cve_nivel_atencion6	string	
+cod_centro_destino	int	
+num_contrato_contable	string	
+cve_empresa	string	
+cve_divisa_contable	string	
+imp_debe	double	
+imp_haber	double	
+cve_tipo_movimiento	string	
+fec_contable	string	
+cve_clacon	string	
+cve_interfaz	string	
+txt_observaciones	string	
+cve_folio_operacion_contable	string	
+num_cuenta_tarjeta_folio	string	
+cve_entidad	string	
+cve_divisa_fis	string	
+imp_ingreso_fis	decimal(25,6)	
+imp_egreso_fis	decimal(25,6)	
+fec_operacion	string	
+cve_operacion	string	
+cve_folio_operacion_fiscal	string	
+num_cuenta_mayor	string	
+cve_cliente	string	
+cve_rfc_emisor	string	
+cve_uuid	string	
+cve_estado_conciliacion	string	
+bnd_conciliacion	int	
+bnd_timbrado	int	
+imp_egreso_sellado	decimal(25,6)	
+imp_ingreso_sellado	decimal(25,6)	
+bnd_sellado	int	
+imp_egreso_rechazado	decimal(25,6)	
+imp_ingreso_rechazado	decimal(25,6)	
+bnd_rechazado	int	
+cve_tipo_comprobante	string	
+des_bien_servicio	string	
+cve_rfc_receptor	string	
+num_asiento	int	
+cod_centro_origen	int	
+cod_asignacion_uuid	int	
+cve_serie	string	
+
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' 
+STORED AS TEXTFILE
+LOCATION 'hdfs:/user/cloudera/PRACTICAS';
