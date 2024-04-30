@@ -1,0 +1,23 @@
+
+pipeline {
+   agent any
+   stages {
+       stage('sources') {
+           steps {
+               git branch: 'main', url: 'https://github.com/01noeli/carga_informacion-.git'
+               
+           }
+       }
+       stage('Hola') {
+           steps {
+                echo 'Hola mundo'
+           }
+       }
+       stage('Hoy') {
+           steps {
+               
+                echo 'Hoy es Martes'
+           }
+       }
+   }
+}
